@@ -10,7 +10,6 @@ package Hibernate;
  * @author Gary
  */
 
-package hibernate;
 
 
 
