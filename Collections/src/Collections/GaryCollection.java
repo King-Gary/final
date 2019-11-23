@@ -6,7 +6,11 @@
 package Collections;
 
 import java.util.*;
-
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Gary
@@ -21,6 +25,8 @@ public class GaryCollection {
 		
 
 		List list = new LinkedList();
+                
+            
 
 
 
@@ -30,7 +36,21 @@ list.add("and Server Administration");
 
 list.add(0, "Cyber Security");
 
+System.out.println("what else do I like?");
 
+Scanner input = new Scanner(System.in);
+String Interest = input.nextLine();
+
+for(int i = 0; i<list.size(); i++)
+{
+    if (list.get(i)==Interest)
+    {
+        System.out.println("this value already exists exiting program");
+        return;
+    }
+}
+System.out.println("This value does not exist adding it");
+list.add(Interest);
 
 	      System.out.println("My Name is Jonathan and I like: ");
 
