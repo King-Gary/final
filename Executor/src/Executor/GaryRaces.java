@@ -5,11 +5,14 @@
  */
 package Executor;
 
+import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 /**
  *
  * @author Gary
  */
-public class GaryRaces implements Runnable{
+public class GaryRaces extends Thread{
  public static String winner;
 
 	public void race(){
