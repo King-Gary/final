@@ -1,13 +1,6 @@
 {  
-  "u1":{ "user":"Gary", "from":"KY", "major":"CIT" },
+  "u1":{ "first name":"Gary", "last anem":"King", "age":"26" , "address":"UT"},
+    
+  "u2":{ "first name":"Katherine", "last anem":"King", "age":"26" , "address":"CT"},
 
-  "u2":{ "user":"Nestor", "from":"NY", "major":"Condtruction" },
-
-  "u3":{ "user":"Mary", "from":"AZ", "major":"Engineering" }, 
-
-  "u4":{ "user":"Stephanie", "from":"ID", "major":"Architecture" },
-
-  "u5":{ "user":"Katherine", "from":"UT", "major":"Family Studies" },
-
-  "u6":{ "user":"Joshua", "from":"IL", "major":"CIT" },
 }
