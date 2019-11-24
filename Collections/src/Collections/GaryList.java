@@ -34,6 +34,12 @@ public class GaryList {
 	  lst.add("Floor");
 
 	  lst.add("Food");
+          
+          System.out.println("adding duplicate");
+          
+          1st.add("Dog");
+          
+          System.out.println("duplicate added");
 
 
 
