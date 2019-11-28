@@ -43,7 +43,7 @@ public class jsonparser {
 
         // parsing file "JSONExample.json"
 
-        Object obj = new jsonparser().parse(new FileReader("C:\\Users\\Laura\\Dropbox\\College\\BYU Idaho\\2018-04-Spring\\CIT360-ObjOrientedProg2\\CIT360\\src\\JSONTopic\\ParseFile.json"));
+        Object obj = new jsonparser().parse(new FileReader(""));
 
 
 
