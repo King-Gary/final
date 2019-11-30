@@ -25,9 +25,13 @@ public class GaryRaces extends Thread{
 
 			//check if race is complete nd if there is a winner already
 
-			
+			AtomicBoolean atomicBoolean = new AtomicBoolean(true);
 
-			boolean isRaceWon = this.isRaceWon(distance);
+                        boolean raceWin = true;
+                        boolean raceNotWin = false;
+
+                        boolean isRaceWon = atomicBoolean.compareAndSet(
+                            raceWin, raceNotWin);
 
 			if(isRaceWon){
 
