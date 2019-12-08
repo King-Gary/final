@@ -24,6 +24,7 @@ import java.util.Map;
 import org.json.simple.JSONArray;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 
 
@@ -43,7 +44,7 @@ public class jsonparser {
 
         // parsing file "JSONExample.json"
 
-        Object obj = new jsonparser().parse(new FileReader("C:\\Users\\Gary\\CIT360\\ProjectCIT360\\JSON\\src\\JSON\newjson.json"));
+        Object obj = new JSONParser().parse(new FileReader("C:\\Users\\Gary\\CIT360\\ProjectCIT360\\JSON\\src\\JSON\newjson.json"));
 
 
 
@@ -102,8 +103,5 @@ public class jsonparser {
 
     }
 
-    private Object parse(FileReader fileReader) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
