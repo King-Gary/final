@@ -9,9 +9,22 @@ package AppCont;
  *
  * @author Gary
  */
-public class Second {
+public class Second implements Handler{
        public void show()
   {
     System.out.println("Displaying Seocnd Page");
   }
+    public void show(Second second) {
+        throw new UnsupportedOperationException("Displaying Seocnd Page"); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void show(First first) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void show(Third third) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
