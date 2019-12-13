@@ -9,41 +9,37 @@ package Hibernate;
  *
  * @author Gary
  */
-import org.hibernate.cfg.AnnotationConfiguration;
-
+import Hibernate.AnnotationConfiguration;
+import javax.imageio.spi.ServiceRegistry;
+import org.hibernate.*;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 public class DeepSleep {
-    private static final SessionFactory sessionFactory;
-
-    
-
-    static {
-
-        try {
-
-            // Create the SessionFactory from standard (hibernate.cfg.xml) 
-
-            // config file.
-
-            sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-
-        } catch (Throwable ex) {
-
-            // Log the exception. 
-
-            System.err.println("Initial SessionFactory creation failed." + ex);
-
-            throw new ExceptionInInitializerError(ex);
-
-        }
-
-    }
-
-    
+    private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
-
+        if (sessionFactory == null) {
+            Configuration configuration = new Configuration().configure();
+            ServiceRegistryBuilder registry = new ServiceRegistryBuilder();
+            registry.applySettings(configuration.getProperties());
+            ServiceRegistry serviceRegistry = registry.buildServiceRegistry();
+             
+            sessionFactory = buildSessionFactory(serviceRegistry);            
+        }
+         
         return sessionFactory;
-
     }
+    
+    public static void shutdown()
+   {
+      getSessionFactory().close();
+   }
+
+    private static SessionFactory buildSessionFactory(ServiceRegistry serviceRegistry) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+
+    
 }
