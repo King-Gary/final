@@ -44,7 +44,7 @@ public class jsonparser {
 
         // parsing file "JSONExample.json"
 
-        Object obj = new JSONParser().parse(new FileReader("C:\\Users\\Gary\\CIT360\\ProjectCIT360\\JSON\\src\\JSON\newjson.json"));
+        Object obj = new JSONParser().parse(new FileReader("C:\\Users\\Gary\\CIT360\\ProjectCIT360\\JSON\\src\\JSON\\newjson1.json"));
 
 
 
@@ -56,9 +56,9 @@ public class jsonparser {
 
         // getting firstName and lastName
 
-        String fName = (String) jObject.get("fName");
+        String fName = (String) jObject.get("first name");
 
-        String lName = (String) jObject.get("lName");
+        String lName = (String) jObject.get("last name");
 
 
 
